@@ -55,11 +55,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.collider.CompareTag("Coin"))
+        if (collision.CompareTag("Coin"))
         {
-            collision.collider.GetComponent<AudioSource>().Play();
+            collision.GetComponent<AudioSource>().Play();
             Destroy(collision.gameObject, 0.5f);
         }
     }
