@@ -187,7 +187,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 5710258234549387075, guid: 78f757334645f3f429622eb34aef57c7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -208,7 +208,7 @@ Transform:
   m_GameObject: {fileID: 211033580}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.77, z: 0}
+  m_LocalPosition: {x: -0.11, y: 2.77, z: 0}
   m_LocalScale: {x: 0.50503, y: 0.50503, z: 0.50503}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -291,7 +291,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   vel: 5
   upForce: 5
-  limiteX: 4
+  limiteX: 7.5
   gameController: {fileID: 698664490}
 --- !u!82 &211033586
 AudioSource:
@@ -898,7 +898,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!224 &1761810526
 RectTransform:
