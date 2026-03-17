@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
     //[SerializeField] float gravity = 1.5f;
     [SerializeField] float limiteX = 4.0f;
 
+    [SerializeField] GameController gameController;
+
     bool impulsionar;
 
     Rigidbody2D rb;
@@ -17,8 +19,6 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
-
-
     }
 
     void Update()
@@ -36,6 +36,17 @@ public class PlayerController : MonoBehaviour
     {
         float x = Input.GetAxis("Horizontal") * vel * Time.deltaTime;
         transform.Translate(x, 0, 0);
+
+        if (Input.GetAxis("Horizontal") > 0) 
+        { 
+            sr.flipX = true;
+        }
+        else
+        {
+            sr.flipX = false;
+        }
+
+        
     }
 
     void callJump()
@@ -59,8 +70,9 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.CompareTag("Coin"))
         {
-            collision.GetComponent<AudioSource>().Play();
-            Destroy(collision.gameObject, 0.5f);
+            GetComponent<AudioSource>().Play();
+            Destroy(collision.gameObject);
+            gameController.coinsCount++;            
         }
     }
 }
